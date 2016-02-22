@@ -1,0 +1,26 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+	<head>
+		<?php echo $this->headMeta(); ?>
+		<?php echo $this->headTitle(); ?>
+
+		<?php echo $this->headLink()->prependStylesheet($this->baseUrl() . '/css/style.css'); ?>
+		<!--<?php echo $this->headScript()->prependFile($this->baseUrl() . '/js/modernizr.js'); ?>-->
+	</head>
+	<body>
+		<div id="header">
+			<?php echo $this->title; ?>
+			<div class="menu">
+				<?php echo $this->navigation(); ?>
+			</div>
+		</div>
+		<hr>
+		<div id="content">
+
+			<?php echo $this->layout()->content; ?>
+
+		</div>
+		<hr>
+		<div id="footer">This is my footer</div>
+	</body>
+</html>

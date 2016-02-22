@@ -1,0 +1,95 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#header,
+#footer {
+	width: 100%;
+	height: 60px;
+	background-color: #666;
+	color: #fff;
+}
+#header {
+	/*w połączeniu z display:inline-block u childa powoduje centrowanie*/
+	text-align: center;
+}
+#content {
+	padding: 20px;
+}
+.menu {
+	display: inline-block;
+}
+ul {
+        list-style-type:none;
+        font-size:18px;
+        height:2em;
+        line-height:2em;
+        text-align:center;
+      }
+
+      /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ul */
+      ul a {
+        display:block;
+        text-decoration:none;
+        color:#000;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ul */
+      ul > li {
+        float:left;
+        width:150px;
+        margin-left:1px;
+        background-color:#6BC6E5;
+      }
+
+      /* wygląd elementu - li - pierwszego dziecka elementu - ul */
+      ul > li:first-child {
+        margin-left:0;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ul - po najechaniu kursorem myszki na element - li */
+      ul > li:hover {
+        background-color:#EEE;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ul - po najechaniu kursorem myszki na element - li */
+      ul > li:hover > a {
+        color:#09C;
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ul - po najechaniu kursorem myszki na element - li */
+      ul > li:hover > ul {
+        display:block;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU------------------------ */
+
+      /* wygląd głównych rozwijanych elementów - ul */
+      ul > li > ul {
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej */
+      ul > li > ul > li {
+        position:relative;
+        background-color:#EEE;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej */
+      ul > li > ul > li > a {
+        border-top:1px solid #FFF;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+      ul > li > ul > li:hover {
+        background-color:#DDD;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      ul > li > ul > li:hover > a {
+        color:#09C;
+      }
